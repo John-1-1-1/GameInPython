@@ -1,6 +1,6 @@
-from bullet.Bullet import Bullet
-from Map import Mapp
-from Turret import Turret
+from proj.bullet.Bullet import Bullet
+from proj.Map import Mapp
+from proj.Turret import Turret
 
 
 class Tank:

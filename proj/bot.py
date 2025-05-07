@@ -1,5 +1,5 @@
-from Pos import Pos
-from Tank import Tank
+from proj.Pos import Pos
+from proj.Tank import Tank
 
 class Bot():
     def __init__(self, tank, map):

@@ -1,6 +1,6 @@
-from Map import Mapp
-from bullet.Bullet import Bullet
-from Pos import Pos
+from proj.Map import Mapp
+from proj.bullet.Bullet import Bullet
+from proj.Pos import Pos
 
 class BulletPool:
 

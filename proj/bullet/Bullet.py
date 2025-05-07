@@ -1,9 +1,6 @@
-import Pos
-from Tank import Tank
-
 
 class Bullet:
-    def __init__(self, pos, tank: Tank):
+    def __init__(self, pos, tank):
         self.pos = pos
         self.tank = tank
 

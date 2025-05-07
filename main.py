@@ -1,10 +1,13 @@
+import math
+
+
+
 import pygame
 
-from Map import Mapp
-from bot import Bot
-import time
-from Pos import Pos
-from Tank import Tank
+from proj.Map import Mapp
+from proj.bot import Bot
+from proj.Pos import Pos
+from proj.Tank import Tank
 
 
 class Map:
@@ -29,6 +32,17 @@ class Map:
 
         # Рисуем квадрат
         pygame.draw.rect(surface, (0, 255, 0), (rect_x, rect_y, 40, 40))
+
+        center_x = rect_x + 20  # 40 / 2
+        center_y = rect_y + 20  # 40 / 2
+        
+        # Вычисляем координаты конца дуло
+        barrel_length = 30  # Длина дуло
+        end_x = center_x + barrel_length * math.cos(math.radians(bot.tank.turret.angle))
+        end_y = center_y + barrel_length * math.sin(math.radians(bot.tank.turret.angle))
+        
+        # Рисуем дуло танка
+        pygame.draw.line(surface, (255, 0, 0), (center_x, center_y), (end_x, end_y), 5)
 
 # Пример использования
 pygame.init()
